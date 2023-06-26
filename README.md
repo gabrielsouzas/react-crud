@@ -57,8 +57,19 @@ npm start
 Para instalar as dependências do lado do servidor no projeto execute o comando abaixo na pasta server:
 
 ~~~node~~~
-npm add mysql express cors nodemon
+npm add mysql express cors nodemon axios dotenv
 ~~~
+
+Onde:
+
+* MySQL: Banco de dados;
+* Express: Servidor;
+* Cors: Middleware de conexões entre servidores;
+* Nodemon: Assistente que reinicia o servidor react a cada alteração;
+* Axios: Gerenciar as requisições;
+* Dotenv: Carregar variáveis de ambiente.
+
+
 
 ## 🛠️ Recursos e Tecnologias
 
