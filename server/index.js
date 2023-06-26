@@ -34,6 +34,15 @@ app.post("/register", (req, res) => {
     })
 });
 
+app.get("/getCards", (req, res) => {
+    let SQL = "SELECT * FROM games;";
+
+    connection.query(SQL, (err, result) => {
+        if(err) console.log(err);
+        else res.send(result);
+    })
+});
+
 /*app.get("/", (req, res) => {
     let SQL = "INSERT INTO games ( name, cost, category) VALUES ('Far Cry 5', '120', 'Ação');";
 
