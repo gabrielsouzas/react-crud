@@ -6,6 +6,9 @@ import Card from "./components/cards/card";
 
 function App() {
   const [values, setValues] = useState();
+  const [name, setName] = useState();
+  const [cost, setCost] = useState();
+  const [category, setCategory] = useState();
   const [listGames, setListGames] = useState();
   
   const handleChangeValues = (value) => {
@@ -23,7 +26,11 @@ function App() {
       cost: values.cost,
       category: values.category,
     }).then((response)=>{
-      console.log(response);
+      //console.log(response);
+      setListGames([...listGames]);
+      setName('');
+      setCost('');
+      setCategory('');
     });
   };
 
@@ -40,6 +47,7 @@ function App() {
           <input 
           type="text" 
           name="name"
+          value={name}
           placeholder="Nome"
           className="register--input"
           onChange={handleChangeValues}
@@ -47,6 +55,7 @@ function App() {
           <input 
           type="text" 
           name="cost"
+          value={cost}
           placeholder="Preço"
           className="register--input"
           onChange={handleChangeValues}
@@ -54,6 +63,7 @@ function App() {
           <input 
           type="text" 
           name="category"
+          value={category}
           placeholder="Categoria"
           className="register--input"
           onChange={handleChangeValues}

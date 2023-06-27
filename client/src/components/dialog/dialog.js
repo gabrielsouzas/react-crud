@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 import Axios from 'axios';
@@ -29,9 +28,15 @@ export default function FormDialog(props) {
     handleClose();
   };
 
-  const handleClickOpen = () => {
-    props.setOpen(true);
+  // Requisição para deletar um registro do bd
+  const handleDeleteGame = () => {
+    Axios.delete(`http://localhost:3001/delete/${editValues.id}`);
+    handleClose();
   };
+
+  /*const handleClickOpen = () => {
+    props.setOpen(true);
+  };*/
 
   const handleClose = () => {
     props.setOpen(false);
@@ -84,7 +89,7 @@ export default function FormDialog(props) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancelar</Button>
-          <Button onClick={handleClose}>Excluir</Button>
+          <Button onClick={handleDeleteGame}>Excluir</Button>
           <Button onClick={handleEditGame}>Salvar</Button>
         </DialogActions>
       </Dialog>

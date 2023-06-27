@@ -30,7 +30,8 @@ app.post("/register", (req, res) => {
     let SQL = "INSERT INTO games ( name, cost, category) VALUES (?, ?, ?);";
 
     connection.query(SQL, [name, cost, category], (err, result)=> {
-        console.log(err);
+        if(err) console.log(err);
+        else res.send(result);
     })
 });
 
@@ -55,6 +56,17 @@ app.put("/edit", (req, res) => {
         if(err) console.log(err);
         else res.send(result);
     })
+});
+
+app.delete("/delete/:id", (req, res) => {
+    const { id } = req.params;
+
+    let SQL = "DELETE FROM games WHERE idgames=?;";
+
+    connection.query(SQL, [id], (err, result) => {
+        if(err) console.log(err);
+        else res.send(result);
+    });
 });
 
 /*app.get("/", (req, res) => {

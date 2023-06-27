@@ -2,6 +2,8 @@ import React from "react";
 import "./card.css";
 import FormDialog from "../dialog/dialog";
 
+import propTypes from 'prop-types';
+
 export default function Card(props) {
 
     const [open, setOpen] = React.useState(false);
@@ -12,7 +14,8 @@ export default function Card(props) {
 
     return (
         <>
-        <FormDialog 
+        <FormDialog
+            key={props.id}
             open={open} 
             setOpen={setOpen}
             id={props.id}
@@ -30,3 +33,7 @@ export default function Card(props) {
         </>
     );
 };
+
+Card.propTypes = {
+    data: propTypes.shape({}),
+}.isRequired;
