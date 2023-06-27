@@ -60,14 +60,19 @@ Para instalar as dependências do lado do servidor no projeto execute o comando 
 npm add mysql express cors nodemon axios dotenv
 ~~~
 
+```node
+npm install @mui/material @emotion/react @emotion/styled
+```
+
 Onde:
 
 * MySQL: Banco de dados;
 * Express: Servidor;
 * Cors: Middleware de conexões entre servidores;
-* Nodemon: Assistente que reinicia o servidor react a cada alteração;
+* Nodemon: Assistente que reinicia o servidor a cada alteração;
 * Axios: Gerenciar as requisições;
-* Dotenv: Carregar variáveis de ambiente.
+* Dotenv: Carregar variáveis de ambiente;
+* MUI/Material: Biblioteca React para criar o formulário de edição.
 
 
 

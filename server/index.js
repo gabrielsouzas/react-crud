@@ -43,6 +43,20 @@ app.get("/getCards", (req, res) => {
     })
 });
 
+app.put("/edit", (req, res) => {
+    const { id } = req.body;
+    const { name } = req.body;
+    const { cost } = req.body;
+    const { category } = req.body;
+
+    let SQL = "UPDATE games SET name=?, cost=?, category=? WHERE idgames=?;";
+
+    connection.query(SQL, [name, cost, category, id] ,(err, result) => {
+        if(err) console.log(err);
+        else res.send(result);
+    })
+});
+
 /*app.get("/", (req, res) => {
     let SQL = "INSERT INTO games ( name, cost, category) VALUES ('Far Cry 5', '120', 'Ação');";
 
