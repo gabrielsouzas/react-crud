@@ -1,24 +1,47 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .app--container {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  background: linear-gradient(90deg, rgba(34, 27, 58, 0.74), rgba(77, 58, 141, 0.74));
 }
 .register--container {
   padding: 10px 20px;
-  border: 3px solid black;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 20px;
+  background-color: rgb(111, 162, 221);
 }
 .register--title {
   text-align: center;
   margin-bottom: 20px;
-  font-family: monospace;
+  color: #fff;
 }
 .register--input {
   display: block;
   padding: 7px 0;
   margin: 10px auto;
+  background-color: rgb(83, 148, 221);
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding-left: 4px;
+  color: #fff;
+  text-decoration-color: #fff;
 }
 .register--button {
-  padding: 2px 5px;
+  padding: 5px 5px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 900;
+  background-color: rgba(25, 54, 218, 0.726);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.register--button:hover {
+  background-color: rgba(15, 84, 173, 0.767);
 }
