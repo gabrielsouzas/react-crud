@@ -43,6 +43,34 @@ Clone este repositório em sua máquina usando o seguinte comando:
 git clone https://github.com/gabrielsouzas/react-crud.git
 ~~~
 
+## Banco de Dados
+
+Abra o MySQL Workbench e crie uma base de dados com o nome que desejar.
+
+Crie a seguinte tabela:
+
+```SQL
+CREATE TABLE `games` (
+  `idgames` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `cost` varchar(45) NOT NULL,
+  `category` varchar(45) NOT NULL,
+  PRIMARY KEY (`idgames`)
+)
+```
+
+Vá até o arquivo .env.example e renomeie por .env.
+
+Dentro do arquivo edite os valore dentro das aspas duplas de acordo com as descrições a seguir:
+
+```env
+PORT="PORTA_MYSQL"
+MYSQL_HOST="LOCALHOST"
+MYSQL_USER="USUARIO_MYSQL" //(Padrão: root)
+MYSQL_PASSWORD="SENHA_MYSQL"
+MYSQL_DB="NOME_BASE_CRIADA"
+```
+
 ## Rodar o projeto
 
 ~~~node
