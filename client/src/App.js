@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="app--container">
         <div className="register--container">
-          <h1 className="register--title">Scrim Shop</h1>
+          <h1 className="register--title">Game Shop</h1>
           <input 
           type="text" 
           name="name"
@@ -70,19 +70,21 @@ function App() {
           />
           <button className="register--button" onClick={() => handleClickButton()}>Cadastrar</button>
         </div>
-          {
-            typeof listGames !== "undefined" && listGames.map((value) => {
-              return <Card
-                key={value.id}
-                listCard={listGames}
-                setListCard={setListGames}
-                id={value.idgames}
-                name={value.name}
-                cost={value.cost}
-                category={value.category}
-              />
-            })
-          }
+          <div className="card--container">
+            {
+              typeof listGames !== "undefined" && listGames.map((value) => {
+                return <Card
+                  key={value.id}
+                  listCard={listGames}
+                  setListCard={setListGames}
+                  id={value.idgames}
+                  name={value.name}
+                  cost={value.cost}
+                  category={value.category}
+                />
+              })
+            }
+          </div>
     </div>
   );
 }

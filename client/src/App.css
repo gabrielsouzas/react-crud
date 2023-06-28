@@ -7,7 +7,9 @@
   align-items: center;
   flex-direction: column;
 
-  background: linear-gradient(90deg, rgba(34, 27, 58, 0.74), rgba(77, 58, 141, 0.74));
+  background: linear-gradient(90deg, rgba(33, 61, 155, 0.74), rgba(10, 55, 204, 0.74));
+  
+  height: 100%;
 }
 .register--container {
   padding: 10px 20px;
@@ -28,8 +30,10 @@
   border: 1px solid #fff;
   border-radius: 8px;
   padding-left: 4px;
+  
+}
+.register--input::placeholder { 
   color: #fff;
-  text-decoration-color: #fff;
 }
 .register--button {
   padding: 5px 5px;
@@ -44,4 +48,16 @@
 
 .register--button:hover {
   background-color: rgba(15, 84, 173, 0.767);
+}
+
+.card--container {
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
