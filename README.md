@@ -43,7 +43,7 @@ Clone este repositório em sua máquina usando o seguinte comando:
 git clone https://github.com/gabrielsouzas/react-crud.git
 ~~~
 
-## Banco de Dados
+## 📦 Banco de Dados
 
 Abra o MySQL Workbench e crie uma base de dados com o nome que desejar.
 
