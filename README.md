@@ -1,5 +1,13 @@
 # Crud com React, Node JS e MySQL - Aula Youtube Vitor Cunha Code
 
+![GitHub repo size](https://img.shields.io/github/repo-size/gabrielsouzas/react-crud?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/gabrielsouzas/react-crud?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/gabrielsouzas/react-crud?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/gabrielsouzas/react-crud?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/gabrielsouzas/react-crud?style=for-the-badge)
+
+<img src="./client/images/print_react_crud.png" alt="Print Screen">
+
 Este é um projeto de estudo de React, Node.js e MySQL, criado com o objetivo de aprender os conceitos básicos dessas tecnologias e desenvolver habilidades na criação de aplicações full-stack.
 
 Foi desenvolvido com os videos do canal **[Vitor Cunha Code](https://www.youtube.com/@VitorCunhaCode)**.
@@ -27,7 +35,7 @@ npx create-react-app .
 
 Esse comando vai instalar as dependências do React no projeto. O ponto no final do comando indica que será feito o procedimento na pasta que está sendo executado o terminal.
 
-ou
+## ou
 
 Clone este repositório em sua máquina usando o seguinte comando:
 
@@ -73,8 +81,6 @@ Onde:
 * Axios: Gerenciar as requisições;
 * Dotenv: Carregar variáveis de ambiente;
 * MUI/Material: Biblioteca React para criar o formulário de edição.
-
-
 
 ## 🛠️ Recursos e Tecnologias
 
